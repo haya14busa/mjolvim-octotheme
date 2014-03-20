@@ -1,4 +1,4 @@
-body > nav {
+body nav {
   position: relative;
   background-color: $nav-bg;
   border: {
@@ -33,14 +33,20 @@ body > nav {
         color: #444;
         border-color: #80b1df;
         @include box-shadow(#80b1df 0 0 4px, #80b1df 0 0 3px inset);
-        background-color: #fff;
+        background-color: $main-bg;
         outline: none;
       }
     }
   }
   fieldset[role=search]{ float: right; width: 48%; }
   fieldset.mobile-nav{ float: left; width: 48%;
-    select{ width: 100%; font-size: .8em; border: 1px solid #888;}
+    select {
+      width: 100%;
+      font-size: .8em;
+      border: 1px solid #f8f8f8;
+      color: #333;
+      background-color: #ebebeb;
+    }
   }
   ul { display: none; }
   @media only screen and (min-width: 550px) {
@@ -105,7 +111,7 @@ body > nav {
   }
 }
 .no-placeholder {
-  body > nav .search {
+  body nav .search {
     background: lighten($nav-bg, 15) image-url('search.png') .3em .25em no-repeat;
     text-indent: 1.3em;
   }
@@ -125,7 +131,7 @@ body > nav {
   &:hover:after { background-color: lighten($nav-color, 20); }
 }
 .maskImage {
-  body > nav {
+  body nav {
     @media only screen and (min-width: 550px) {
       ul[data-subscription$=email] + form {
         width: $sidebar-width-medium - $pad-medium*2 - $sidebar-pad-medium - 32px;
