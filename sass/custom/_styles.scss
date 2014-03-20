@@ -79,6 +79,14 @@ article {
 	.blog-index {
 		article {
 			padding-top: 4em;
+      padding-bottom: 2em;
+      background: none;
+      border-bottom: 2px solid rgba(0, 0, 0, .1);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+      &:last-of-type {
+        border-bottom: none;
+        box-shadow: none;
+      }
 
 			header {
 				padding-left: 0;
