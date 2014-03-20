@@ -1,4 +1,61 @@
-<div role="contentinfo">
+<div id="footer-widgets-wrapper">
+  <div id="footer-first" class="footer-widget">
+    <h3>About Me</h3>
+    <section class="about-me">
+      {% if site.gravatar_url %}
+        <img class="icon-image" src="{{ site.gravatar_url }}?s=240" alt="icon_image">
+      {% endif %}
+      <div>
+        <ul>
+          {% if site.github_user %}
+            <li>GitHub: <a href="https://github.com/{{ site.github_user }}">@{{ site.github_user }}</a></li>
+          {% endif %}
+          {% if site.twitter_user %}
+            <li>Twitter: <a href="https://twitter.com/{{ site.twitter_user }}">@{{ site.twitter_user }}</a></li>
+          {% endif %}
+            <li>Blog: <a href="{{ site.url }}">{{ site.url }}</a></li>
+        </ul>
+        <p>
+          V!mm!shment Th!s World!
+        </p>
+      </div>
+    </section>
+  </div><!-- /div#footer-second -->
+
+  <div id="footer-second" class="footer-widget">
+    <h3>Recent Posts</h3>
+    <section id="hatena-popular" class="hatena-bookmark">
+      <script language="javascript" type="text/javascript" src="http://b.hatena.ne.jp/js/widget.js" charset="utf-8"></script>
+      <script language="javascript" type="text/javascript">
+        Hatena.BookmarkWidget.url   = "{{ site.url }}";
+        Hatena.BookmarkWidget.title = "Recent Posts";
+        Hatena.BookmarkWidget.sort  = "hot";
+        Hatena.BookmarkWidget.width = 0;
+        Hatena.BookmarkWidget.num   = 10;
+        Hatena.BookmarkWidget.theme = "notheme";
+        Hatena.BookmarkWidget.load();
+      </script>
+    </section>
+  </div><!-- /div#footer-second -->
+
+  <div id="footer-third" class="footer-widget">
+    <h3>Popular Posts</h3>
+    <section id="hatena-popular" class="hatena-bookmark">
+      <script language="javascript" type="text/javascript" src="http://b.hatena.ne.jp/js/widget.js" charset="utf-8"></script>
+      <script language="javascript" type="text/javascript">
+        Hatena.BookmarkWidget.url   = "{{ site.url }}";
+        Hatena.BookmarkWidget.title = "Popular Posts";
+        Hatena.BookmarkWidget.sort  = "count";
+        Hatena.BookmarkWidget.width = 0;
+        Hatena.BookmarkWidget.num   = 10;
+        Hatena.BookmarkWidget.theme = "notheme";
+        Hatena.BookmarkWidget.load();
+      </script>
+    </section>
+  </div><!-- /div#footer-third -->
+</div><!-- /div#footer-widgets-wrapper -->
+
+<div id="credit" role="contentinfo">
   <p>
     Copyright &copy; {{ site.time | date: "%Y" }} - <a href="https://github.com/{{ site.author }}/">{{ site.author }}</a> -
     <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> | Themed with <a href="https://github.com/haya14busa/mjolvim-octotheme">Mjolvim</a></span>

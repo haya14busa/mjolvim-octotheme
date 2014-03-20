@@ -1,3 +1,5 @@
+/* Footer  */
+
 body > footer {
   @extend .sans;
   text-align: center;
@@ -6,14 +8,121 @@ body > footer {
   background-color: $footer-bg;
   position: relative;
   padding-top: 2.5em;
-  padding-bottom: 2.5em;
-  // margin-top: 3em;
   margin: 3em auto 0px;
-  // @include border-bottom-radius(.4em);
   z-index: 1;
   a {
     @include link-colors($footer-link-color, $footer-link-color-hover, $visited: $footer-link-color);
-    text-decoration: none;
   }
   p:last-child { margin-bottom: 0; }
+}
+
+/* Credit */
+#credit {
+  margin: 15px 0;
+  padding: 5px 0;
+  background-color: lighten($footer-bg, 10);
+  a {
+    @include link-colors($footer-link-credit-color, $footer-link-credit-color-hover, $visited: $footer-link-color);
+    text-decoration: none;
+  }
+}
+
+/* Footer Widget */
+#footer-widgets-wrapper {
+  max-width: $max-width;
+  margin: 0 auto;
+  overflow: hidden;
+  @include clearfix;
+
+  .footer-widget {
+    width: 30%;
+    float: left;
+    margin-right: 2%;
+    padding: 0.4em;
+    padding-bottom: 32767px;
+    margin-bottom: -32767px;
+    background-color: #f8f8f8;
+    @include white-box();
+    &:last-of-type {
+      margin-right: 0%;
+    }
+    h3 {
+      @include line-bottom(.2,.5);
+      padding-bottom: 0.3em;
+    }
+    ul {
+      list-style: none;
+      li {
+        text-align: left;
+        @include line-bottom(.1, .2);
+      }
+    }
+    section {
+      margin: 0 auto;
+    }
+  }
+  @media only screen and (max-width: 750px) {
+    .footer-widget {
+      width: 95%;
+      margin: 0 auto;
+      float: none;
+      padding-bottom: 0.4em;
+      margin-bottom: 0.4em;
+      &:last-of-type {
+        margin: 0 auto;
+      }
+    }
+  }
+
+}
+
+/* About Me */
+.about-me {
+  ul li {
+    text-align: center !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+  }
+  .icon-image {
+    width: 150px;
+    height: 150px;
+    @include shadow-box;
+  }
+}
+
+
+/* Hatena Widgets */
+/* Do not show Hatena title & footer */
+.hatena-bookmark div.hatena-bookmark-widget-title,
+.hatena-bookmark div.hatena-bookmark-widget-footer {
+  display: none;
+}
+
+.hatena-bookmark-widget-body span.hatena-bookmark-count strong a {
+  background-color: #ffcccc;
+  font-weight: bold;
+  font-style: normal;
+  display: inline;
+  color: red;
+
+  text-decoration: underline;
+  font-size: 0.8em;
+}
+
+.hatena-bookmark-widget-body span.hatena-bookmark-count em a {
+  background-color: #fff0f0;
+  font-weight: bold;
+  display: inline;
+  font-style: normal;
+  color: #ff6666;
+
+  text-decoration: underline;
+  font-size: 0.8em;
+}
+
+.hatena-bookmark-widget-body span.hatena-bookmark-count a {
+  text-decoration: underline;
+  color: blue;
+  background: none;
+  margin-left: 0.3em;
 }
