@@ -1,23 +1,23 @@
-Whitespace
+Mjolvim Octopress Theme
 ==========
-Whitespace is a minimal and responsive theme for [Octopress](http://octopress.org). This theme let your contents take the center stage of your blog.
+Mjolvim is a minimal and responsive theme for [Octopress](http://octopress.org).
+This theme let your contents take the center stage of your blog.
 
-Check out the theme in action [here](http://lucaslew.com).
-
+Mjolvim is heavily based on [lucaslew/whitespace](https://github.com/lucaslew/whitespace).
 
 Install
 -------
     $ cd octopress
-    $ git clone git://github.com/lucaslew/whitespace.git .themes/whitespace
-    $ rake install['whitespace']
+    $ git clone git://github.com/haya14busa/mjolvim-octotheme.git .themes/mjolvim
+    $ rake install['mjolvim']
     $ rake generate
 
 
 Update
 ------
-    $ cd octopress/.themes/whitespace
+    $ cd octopress/.themes/mjolvim
     $ git pull
-    $ rake install['whitespace']
+    $ rake install['mjolvim']
     $ rake generate
 
 
@@ -39,9 +39,9 @@ Added support for open-source [Juvia](https://github.com/phusion/juvia) comment 
 
 License
 -------
-(The MIT License)
+The MIT License
 
-Copyright © 2014 Lucas Lew
+Copyright © 2014 haya14busa
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ‘Software’), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
