@@ -26,3 +26,19 @@
   @return $text-color;
 }
 
+@mixin clearfix {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020";
+  }
+
+  &:after {
+
+    clear: both;
+  }
+}
