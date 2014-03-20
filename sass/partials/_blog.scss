@@ -21,8 +21,8 @@ article {
       margin: 0;
       &.meta {
         @extend .sans;
-        text-transform: uppercase;
-        position: absolute; top: 0;
+        // text-transform: uppercase;
+        // position: absolute; top: 0;
       }
     }
     @media only screen and (min-width: 768px) {
@@ -143,3 +143,23 @@ article + article {
     }
   }
 }
+
+#content h1 a {
+  color: $text-color;
+}
+
+
+.meta {
+  color: #aaa;
+}
+
+.post-meta {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9em;
+  font-weight: 200;
+  font-style: italic;
+  letter-spacing: 6px;
+  letter-spacing: 0.6em;
+}
+
