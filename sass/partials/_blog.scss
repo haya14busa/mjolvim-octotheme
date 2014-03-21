@@ -31,9 +31,30 @@ article {
       background: $img-border bottom left repeat-x;
     }
   }
+  h1 a {
+    border-bottom: dashed 2px $light-blue;
+    line-height: 1.5;
+    &:hover {
+      text-decoration: none;
+    }
+  }
   h2 {
-    padding-top: 0.8em;
-    background: $img-border top left repeat-x;
+    &:before, &:after {
+      display: block;
+      content: '';
+      height: 1px;
+      @include linear-gradient(left, lighten($light-blue, 80),
+                                     lighten($light-blue, 30),
+                                     lighten($light-blue, 80))
+    }
+    &:before {
+      margin-bottom: 0.4em;
+    }
+    &:after {
+      margin-top: 0.4em;
+    }
+    margin-top: 1.2em;
+    text-align: center;
   }
   .entry-content & h2:first-child, header + h2 { padding-top: 0; }
   h2:first-child, header + h2 { background: none; }
@@ -45,6 +66,11 @@ article {
     font-size: 2.0em; font-style: italic;
     line-height: 1.3em;
   }
+  h3 {
+    border-left: solid 3px lighten($light-blue, 10);
+    padding: 0 0 0 0.5em;
+  }
+
   img, video, .flash-video {
     @extend .flex-content;
     @extend .basic-alignment;

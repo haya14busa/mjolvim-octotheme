@@ -38,7 +38,6 @@
   }
 
   &:after {
-
     clear: both;
   }
 }
@@ -65,8 +64,18 @@
 	@include box-shadow(rgba(255, 255, 255, $op2) -1px 0 0 inset);
 }
 
+/* white-box */
 @mixin white-box(){
   box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
   background-color: #fdfdfd;
   border-radius: 4px;
 }
+
+/* linear-gradient */
+@mixin linear-gradient($direction, $start, $middle, $end) {
+  background-image: -webkit-linear-gradient($direction, $start, $middle, $end);
+  background-image:    -moz-linear-gradient($direction, $start, $middle, $end);
+  background-image:     -ms-linear-gradient($direction, $start, $middle, $end);
+  background-image:      -o-linear-gradient($direction, $start, $middle, $end);
+}
+
