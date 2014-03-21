@@ -43,6 +43,10 @@ body > footer {
     margin-bottom: -32767px;
     background-color: #f8f8f8;
     @include white-box();
+
+    p:last-child {
+      margin-bottom: 15px;
+    }
     &:last-of-type {
       margin-right: 0%;
     }
