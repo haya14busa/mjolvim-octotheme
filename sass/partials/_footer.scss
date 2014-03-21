@@ -22,7 +22,10 @@ body > footer {
   padding: 5px 0;
   background-color: lighten($footer-bg, 10);
   a {
-    @include link-colors($footer-link-credit-color, $footer-link-credit-color-hover, $visited: $footer-link-color);
+    @include link-colors($footer-link-credit-color,
+                         $footer-link-credit-color-hover,
+                         $footer-link-credit-color,
+                         $footer-link-credit-color);
     text-decoration: none;
   }
 }
@@ -47,6 +50,9 @@ body > footer {
     p:last-child {
       margin-bottom: 15px;
     }
+    &:first-of-type {
+      margin-left: 1%;
+    }
     &:last-of-type {
       margin-right: 0%;
     }
@@ -68,12 +74,13 @@ body > footer {
   @media only screen and (max-width: 750px) {
     .footer-widget {
       width: 95%;
-      margin: 0 auto;
+      margin: 5px auto;
       float: none;
       padding-bottom: 0.4em;
       margin-bottom: 0.4em;
+      &:first-of-type,
       &:last-of-type {
-        margin: 0 auto;
+        margin: 5px auto;
       }
     }
   }
