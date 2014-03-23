@@ -46,7 +46,7 @@ article {
         height: 1px;
         @include linear-gradient(left, lighten($light-blue, 80),
                                        lighten($light-blue, 30),
-                                       lighten($light-blue, 80))
+                                       lighten($light-blue, 80));
       }
       &:before {
         margin-bottom: 0.4em;

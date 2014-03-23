@@ -80,9 +80,20 @@ article {
 		article {
 			padding-top: 4em;
       padding-bottom: 2em;
+      margin-bottom: 5em;
       background: none;
-      border-bottom: 2px solid rgba(0, 0, 0, .1);
-      box-shadow: 0 1px 0 rgba(255, 255, 255, 1);
+      &:before {
+        display: block;
+        content: '';
+        height: 1px;
+        margin-bottom: 0;
+        border-bottom: dashed 10px lighten($light-blue, 30);
+      }
+      &:first-of-type {
+        &:before {
+          display: none;
+        }
+      }
       &:last-of-type {
         border-bottom: none;
         box-shadow: none;
