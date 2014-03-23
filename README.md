@@ -3,7 +3,7 @@ Mjolvim Octopress Theme
 Mjolvim is a minimal and responsive theme for [Octopress](http://octopress.org).
 This theme let your contents take the center stage of your blog.
 
-Mjolvim is heavily based on [lucaslew/whitespace](https://github.com/lucaslew/whitespace).
+Mjolvim is based on [lucaslew/whitespace](https://github.com/lucaslew/whitespace).
 
 Install
 -------
